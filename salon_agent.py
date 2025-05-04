@@ -10,6 +10,7 @@ from livekit.plugins import (
 from livekit.plugins.turn_detector.multilingual import MultilingualModel
 from help_requests_db import add_help_request, get_learned_answer
 import logging
+logging.getLogger("pymongo").setLevel(logging.WARNING)
 import os
 import asyncio
 from webhook_server import run_webhook_server
@@ -98,9 +99,7 @@ async def entrypoint(ctx: agents.JobContext):
                     learned_answer = get_learned_answer(user_question)
                     if learned_answer:
                         logger.info(f"Found learned answer for: {user_question}")
-                        asyncio.create_task(session.generate_reply(
-                            instructions=learned_answer["answer"]
-                        ))
+                        await session.say(learned_answer)
                     # Only proceed with supervisor check if we don't have a learned answer
                     elif any("supervisor" in str(c).lower() for c in message.content):
                         add_help_request(user_question, conversation_id)
