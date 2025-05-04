@@ -55,7 +55,7 @@ async def supervisor_answer(request):
                 logger.info(f"Sending formatted response: {formatted_response}")
                 
                 # Use the session's generate_reply method
-                await active_session.generate_reply(instructions=formatted_response)
+                await active_session.say(formatted_response)
                 logger.info(f"Successfully generated reply for request {request_id}")
             except Exception as e:
                 logger.error(f"Error generating reply: {str(e)}")

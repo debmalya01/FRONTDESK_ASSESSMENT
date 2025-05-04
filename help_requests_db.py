@@ -5,9 +5,10 @@ from dotenv import load_dotenv
 import os
 from bson import ObjectId
 import logging
+from rapidfuzz import process, fuzz
 
 # Configure logging
-logging.basicConfig(level=logging.DEBUG)
+# logging.basicConfig(level=logging.DEBUG)
 logger = logging.getLogger(__name__)
 
 # Load environment variables from .env file
@@ -21,6 +22,9 @@ LEARNED_ANSWERS_COLLECTION = "learned_answers"
 
 # Request timeout in minutes
 REQUEST_TIMEOUT_MINUTES = 2
+
+# Fuzzy matching threshold (0-100)
+FUZZY_MATCH_THRESHOLD = 80
 
 # Create a new client and connect to the server using ServerApi
 client = MongoClient(MONGO_URI, server_api=ServerApi('1'))
@@ -139,8 +143,44 @@ def add_learned_answer(question, answer):
         })
         logger.info(f"Added new learned answer for question: {question}")
 
+def get_fuzzy_learned_answer(question, threshold=FUZZY_MATCH_THRESHOLD):
+    """Get a learned answer using fuzzy matching"""
+    all_answers = list(learned_answers.find({}))
+    if not all_answers:
+        return None
+        
+    # Extract questions for matching
+    questions = [qa['question'] for qa in all_answers]
+    
+    # Find the best match using token sort ratio (handles word order changes)
+    match, score, idx = process.extractOne(
+        question, 
+        questions, 
+        scorer=fuzz.token_sort_ratio
+    )
+    
+    logger.debug(f"Fuzzy match score: {score} for question: {question}")
+    
+    if score >= threshold:
+        matched_answer = all_answers[idx]
+        logger.info(f"Found fuzzy match (score: {score}): {matched_answer['question']}")
+        return matched_answer['answer']
+    return None
+
 def get_learned_answer(question):
-    return learned_answers.find_one({"question": question})
+    """Get a learned answer using exact or fuzzy matching"""
+    # Try exact match first
+    exact_match = learned_answers.find_one({"question": question})
+    if exact_match:
+        logger.info(f"Found exact match for question: {question}")
+        return exact_match['answer']
+        
+    # Try fuzzy match if no exact match found
+    fuzzy_match = get_fuzzy_learned_answer(question)
+    if fuzzy_match:
+        return fuzzy_match
+        
+    return None
 
 def get_resolved_requests():
     return list(help_requests.find({"status": "resolved", "notified": False}))
