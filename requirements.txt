@@ -1,0 +1,10 @@
+flask
+pymongo
+python-dotenv
+requests
+rapidfuzz
+livekit-agents[deepgram,groq,cartesia,silero,turn-detector]~=1.0
+groq
+deepgram
+silero
+aiohttp 

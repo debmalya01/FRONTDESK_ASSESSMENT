@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontdesk Admin</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --bs-body-bg: #1a1d21;
+            --bs-body-color: #e9ecef;
+            --bs-card-bg: #2d3238;
+            --bs-card-border-color: #3d4248;
+            --bs-table-color: #e9ecef;
+            --bs-table-bg: #2d3238;
+            --bs-table-border-color: #3d4248;
+            --bs-table-hover-bg: #3d4248;
+            --bs-table-hover-color: #fff;
+        }
+
+        body {
+            background-color: var(--bs-body-bg);
+            color: var(--bs-body-color);
+        }
+
+        .card {
+            background-color: var(--bs-card-bg);
+            border-color: var(--bs-card-border-color);
+        }
+
+        .table {
+            color: var(--bs-table-color);
+            background-color: var(--bs-table-bg);
+            border-color: var(--bs-table-border-color);
+        }
+
+        .table td, .table th {
+            border-color: var(--bs-table-border-color);
+        }
+
+        .table-hover tbody tr:hover {
+            background-color: var(--bs-table-hover-bg);
+            color: var(--bs-table-hover-color);
+        }
+
+        .status-badge {
+            padding: 0.5em 0.8em;
+            border-radius: 4px;
+            font-weight: 500;
+        }
+
+        .status-pending {
+            background-color: #ffc107;
+            color: #000;
+        }
+
+        .status-resolved {
+            background-color: #198754;
+            color: #fff;
+        }
+
+        .status-unresolved {
+            background-color: #dc3545;
+            color: #fff;
+        }
+
+        .btn-primary {
+            background-color: #0d6efd;
+            border-color: #0d6efd;
+        }
+
+        .btn-primary:hover {
+            background-color: #0b5ed7;
+            border-color: #0a58ca;
+        }
+
+        .btn-success {
+            background-color: #198754;
+            border-color: #198754;
+        }
+
+        .btn-success:hover {
+            background-color: #157347;
+            border-color: #146c43;
+        }
+
+        .btn-danger {
+            background-color: #dc3545;
+            border-color: #dc3545;
+        }
+
+        .btn-danger:hover {
+            background-color: #bb2d3b;
+            border-color: #b02a37;
+        }
+
+        .btn-secondary {
+            background-color: #6c757d;
+            border-color: #6c757d;
+        }
+
+        .btn-secondary:hover {
+            background-color: #5c636a;
+            border-color: #565e64;
+        }
+
+        .modal-content {
+            background-color: var(--bs-card-bg);
+            border-color: var(--bs-card-border-color);
+        }
+
+        .modal-header {
+            border-bottom-color: var(--bs-card-border-color);
+        }
+
+        .modal-footer {
+            border-top-color: var(--bs-card-border-color);
+        }
+
+        .form-control {
+            background-color: #2d3238;
+            border-color: #3d4248;
+            color: #e9ecef;
+        }
+
+        .form-control:focus {
+            background-color: #2d3238;
+            border-color: #0d6efd;
+            color: #e9ecef;
+        }
+
+        .form-label {
+            color: #e9ecef;
+        }
+
+        .alert {
+            background-color: #2d3238;
+            border-color: #3d4248;
+            color: #e9ecef;
+        }
+
+        .alert-info {
+            background-color: #0dcaf0;
+            border-color: #0dcaf0;
+            color: #000;
+        }
+
+        .alert-success {
+            background-color: #198754;
+            border-color: #198754;
+            color: #fff;
+        }
+
+        .alert-danger {
+            background-color: #dc3545;
+            border-color: #dc3545;
+            color: #fff;
+        }
+
+        .alert-warning {
+            background-color: #ffc107;
+            border-color: #ffc107;
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="/">Frontdesk Admin</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/requests/pending">Pending</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/requests/resolved">Resolved</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/requests/unresolved">Unresolved</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/history">History</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/learned-answers">Learned Answers</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        {% block content %}{% endblock %}
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html> 
