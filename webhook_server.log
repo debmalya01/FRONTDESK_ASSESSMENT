@@ -408,3 +408,374 @@ livekit.agents._exceptions.APIStatusError: Cartesia connection closed unexpected
 2025-05-04 20:40:10,617 DEBUG livekit.agents: job exiting
 2025-05-04 20:40:10,622 INFO livekit.agents: process exiting
 2025-05-04 20:40:10,812 WARNING livekit.agents: exiting forcefully
+2025-05-04 22:33:01,067 DEBUG asyncio: Using proactor: IocpProactor
+2025-05-04 22:33:01,072 INFO livekit.agents: starting worker
+2025-05-04 22:33:01,072 INFO livekit.agents: starting inference executor
+2025-05-04 22:33:04,633 INFO livekit.agents: initializing inference process
+2025-05-04 22:33:04,633 DEBUG livekit.agents: initializing inference runner
+2025-05-04 22:33:04,633 INFO livekit.agents: initializing inference process
+2025-05-04 22:33:04,633 DEBUG livekit.agents: initializing inference runner
+2025-05-04 22:33:09,928 INFO livekit.agents: inference process initialized
+2025-05-04 22:33:09,928 INFO livekit.agents: [1msee tracing information at http://localhost:52532/debug[0m
+2025-05-04 22:33:09,928 INFO livekit.agents: initializing job runner
+2025-05-04 22:33:09,928 INFO livekit.agents: job runner initialized
+2025-05-04 22:33:09,928 DEBUG asyncio: Using proactor: IocpProactor
+2025-05-04 22:33:09,928 INFO livekit.agents: inference process initialized
+2025-05-04 22:33:09,928 DEBUG asyncio: Using proactor: IocpProactor
+2025-05-04 22:33:09,928 DEBUG asyncio: Using proactor: IocpProactor
+2025-05-04 22:33:10,010 INFO __main__: Starting new conversation with ID: conv_<MagicMock name='mock.name' id='2303793578256'>_2025-05-04T17:03:10.010617
+2025-05-04 22:33:11,518 INFO __main__: Webhook server started as async task with LiveKit session
+2025-05-04 22:33:11,518 INFO webhook_server: LiveKit session successfully initialized in webhook server
+2025-05-04 22:33:11,521 INFO webhook_server: Webhook server started on port 5005
+2025-05-04 22:33:11,522 INFO __main__: Webhook server initialized successfully
+2025-05-04 22:33:11,523 INFO __main__: Registered conversation item handler
+2025-05-04 22:33:11,545 INFO __main__: Session started successfully
+2025-05-04 22:33:12,296 DEBUG livekit.agents: http_session(): creating a new httpclient ctx
+2025-05-04 22:33:24,861 DEBUG __main__: New conversation item added: id='item_ecda70cda723' type='message' role='assistant' content=["Welcome to Glam Salon! Thank you for considering us for your beauty needs. I'd be happy to assist you. What can I help you with today? Would you like to book an appointment or inquire about our services?"] interrupted=False hash=None created_at=1746378204.8606312
+2025-05-04 22:33:24,862 WARNING __main__: No user question found before assistant reply.
+2025-05-04 22:33:24,864 INFO __main__: Welcome message sent
+2025-05-04 22:33:29,963 DEBUG livekit.agents: received user transcript
+2025-05-04 22:33:30,120 DEBUG livekit.plugins.turn_detector: eou prediction
+2025-05-04 22:33:30,123 DEBUG __main__: New conversation item added: id='item_f6d6e43fb5ba' type='message' role='user' content=['Tell me about the location that you are situated in.'] interrupted=False hash=None created_at=1746378210.1219454
+2025-05-04 22:33:43,357 DEBUG __main__: New conversation item added: id='item_e28d9fc0535a' type='message' role='assistant' content=["We're conveniently located at 123 Sunset Park, Calcutta. If you're planning to visit us, please note that our operating hours are from Monday to Saturday, 9 AM to 6 PM. We're closed on Sundays."] interrupted=False hash=None created_at=1746378223.3573303
+2025-05-04 22:33:43,445 DEBUG help_requests_db: Fuzzy match score: 52.52525252525253 for question: Tell me about the location that you are situated in.
+2025-05-04 22:33:59,260 DEBUG livekit.agents: received user transcript
+2025-05-04 22:33:59,430 DEBUG livekit.plugins.turn_detector: eou prediction
+2025-05-04 22:33:59,431 DEBUG __main__: New conversation item added: id='item_7083ff2e2880' type='message' role='user' content=['Do you provide full body massage?'] interrupted=False hash=None created_at=1746378239.4319267
+2025-05-04 22:34:07,188 DEBUG __main__: New conversation item added: id='item_3b6692ac75a6' type='message' role='assistant' content=['Let me check with my supervisor and get back to you.'] interrupted=False hash=None created_at=1746378247.1887133
+2025-05-04 22:34:07,230 INFO help_requests_db: Found exact match for question: Do you provide full body massage?
+2025-05-04 22:34:07,230 INFO __main__: Found learned answer for: Do you provide full body massage?
+2025-05-04 22:34:10,900 DEBUG __main__: New conversation item added: id='item_c4b28ce8765c' type='message' role='assistant' content=['Yes we do offer full body massage at 700 INR'] interrupted=False hash=None created_at=1746378250.9003341
+2025-05-04 22:34:10,942 INFO help_requests_db: Found exact match for question: Do you provide full body massage?
+2025-05-04 22:34:10,942 INFO __main__: Found learned answer for: Do you provide full body massage?
+2025-05-04 22:34:15,311 DEBUG __main__: New conversation item added: id='item_9276f7e0e070' type='message' role='assistant' content=['Yes we do offer full body massage at 700 INR'] interrupted=False hash=None created_at=1746378255.3119938
+2025-05-04 22:34:15,354 INFO help_requests_db: Found exact match for question: Do you provide full body massage?
+2025-05-04 22:34:15,355 INFO __main__: Found learned answer for: Do you provide full body massage?
+2025-05-04 22:34:19,158 DEBUG __main__: New conversation item added: id='item_63e6f98a82e3' type='message' role='assistant' content=['Yes we do offer full body massage at 700 INR'] interrupted=False hash=None created_at=1746378259.1588547
+2025-05-04 22:34:19,202 INFO help_requests_db: Found exact match for question: Do you provide full body massage?
+2025-05-04 22:34:19,203 INFO __main__: Found learned answer for: Do you provide full body massage?
+2025-05-04 22:34:23,206 DEBUG __main__: New conversation item added: id='item_355a5ffff7dd' type='message' role='assistant' content=['Yes we do offer full body massage at 700 INR'] interrupted=False hash=None created_at=1746378263.2060602
+2025-05-04 22:34:23,261 INFO help_requests_db: Found exact match for question: Do you provide full body massage?
+2025-05-04 22:34:23,261 INFO __main__: Found learned answer for: Do you provide full body massage?
+2025-05-04 22:34:26,399 DEBUG __main__: New conversation item added: id='item_122a4d2bd843' type='message' role='assistant' content=['Yes we do offer full body massage at 700 INR'] interrupted=False hash=None created_at=1746378266.399249
+2025-05-04 22:34:26,446 INFO help_requests_db: Found exact match for question: Do you provide full body massage?
+2025-05-04 22:34:26,446 INFO __main__: Found learned answer for: Do you provide full body massage?
+2025-05-04 22:34:30,249 DEBUG __main__: New conversation item added: id='item_f505cf293b99' type='message' role='assistant' content=['Yes we do offer full body massage at 700 INR'] interrupted=False hash=None created_at=1746378270.2493684
+2025-05-04 22:34:30,291 INFO help_requests_db: Found exact match for question: Do you provide full body massage?
+2025-05-04 22:34:30,292 INFO __main__: Found learned answer for: Do you provide full body massage?
+2025-05-04 22:34:34,605 DEBUG __main__: New conversation item added: id='item_1597b8fe70f5' type='message' role='assistant' content=['Yes we do offer full body massage at 700 INR'] interrupted=False hash=None created_at=1746378274.6050382
+2025-05-04 22:34:34,647 INFO help_requests_db: Found exact match for question: Do you provide full body massage?
+2025-05-04 22:34:34,647 INFO __main__: Found learned answer for: Do you provide full body massage?
+2025-05-04 22:34:38,151 DEBUG __main__: New conversation item added: id='item_a3e2fd22f2ca' type='message' role='assistant' content=['Yes we do offer full body massage at 700 INR'] interrupted=False hash=None created_at=1746378278.1519344
+2025-05-04 22:34:38,193 INFO help_requests_db: Found exact match for question: Do you provide full body massage?
+2025-05-04 22:34:38,194 INFO __main__: Found learned answer for: Do you provide full body massage?
+2025-05-04 22:34:42,019 DEBUG __main__: New conversation item added: id='item_c430ae587323' type='message' role='assistant' content=['Yes we do offer full body massage at 700 INR'] interrupted=False hash=None created_at=1746378282.0193179
+2025-05-04 22:34:42,061 INFO help_requests_db: Found exact match for question: Do you provide full body massage?
+2025-05-04 22:34:42,062 INFO __main__: Found learned answer for: Do you provide full body massage?
+2025-05-04 22:34:42,802 INFO livekit.agents: shutting down worker
+2025-05-04 22:34:42,804 DEBUG livekit.agents: shutting down job task
+2025-05-04 22:34:42,805 DEBUG livekit.agents: http_session(): closing the httpclient ctx
+2025-05-04 22:34:42,806 DEBUG livekit.agents: job exiting
+2025-05-04 22:34:42,809 INFO livekit.agents: process exiting
+2025-05-04 22:41:26,927 DEBUG asyncio: Using proactor: IocpProactor
+2025-05-04 22:41:26,930 INFO livekit.agents: starting worker
+2025-05-04 22:41:26,931 INFO livekit.agents: starting inference executor
+2025-05-04 22:41:30,306 INFO livekit.agents: initializing inference process
+2025-05-04 22:41:30,306 DEBUG livekit.agents: initializing inference runner
+2025-05-04 22:41:30,306 INFO livekit.agents: initializing inference process
+2025-05-04 22:41:30,306 DEBUG livekit.agents: initializing inference runner
+2025-05-04 22:41:34,684 INFO livekit.agents: inference process initialized
+2025-05-04 22:41:34,685 DEBUG asyncio: Using proactor: IocpProactor
+2025-05-04 22:41:34,684 INFO livekit.agents: inference process initialized
+2025-05-04 22:41:34,685 DEBUG asyncio: Using proactor: IocpProactor
+2025-05-04 22:41:34,689 INFO livekit.agents: [1msee tracing information at http://localhost:52704/debug[0m
+2025-05-04 22:41:34,695 INFO livekit.agents: initializing job runner
+2025-05-04 22:41:34,697 INFO livekit.agents: job runner initialized
+2025-05-04 22:41:34,699 DEBUG asyncio: Using proactor: IocpProactor
+2025-05-04 22:41:34,795 INFO __main__: Starting new conversation with ID: conv_<MagicMock name='mock.name' id='2333127753808'>_2025-05-04T17:11:34.795244
+2025-05-04 22:41:36,163 INFO __main__: Webhook server started as async task with LiveKit session
+2025-05-04 22:41:36,175 INFO webhook_server: LiveKit session successfully initialized in webhook server
+2025-05-04 22:41:36,176 INFO webhook_server: Webhook server started on port 5005
+2025-05-04 22:41:36,176 INFO __main__: Webhook server initialized successfully
+2025-05-04 22:41:36,176 INFO __main__: Registered conversation item handler
+2025-05-04 22:41:36,183 INFO __main__: Session started successfully
+2025-05-04 22:41:36,858 DEBUG livekit.agents: http_session(): creating a new httpclient ctx
+2025-05-04 22:41:48,401 DEBUG __main__: New conversation item added: id='item_2eff5a255a9d' type='message' role='assistant' content=["Thank you for calling Glam Salon! I'm GlamBot, your virtual receptionist. I'm happy to assist you with any questions or concerns you may have about our services. What can I help you with today?"] interrupted=False hash=None created_at=1746378708.401367
+2025-05-04 22:41:48,402 WARNING __main__: No user question found before assistant reply.
+2025-05-04 22:41:48,403 INFO __main__: Welcome message sent
+2025-05-04 22:41:53,213 DEBUG livekit.agents: received user transcript
+2025-05-04 22:41:53,300 DEBUG livekit.plugins.turn_detector: eou prediction
+2025-05-04 22:41:53,301 DEBUG __main__: New conversation item added: id='item_92855e0060a1' type='message' role='user' content=['Do you provide full body massage?'] interrupted=False hash=None created_at=1746378713.3005157
+2025-05-04 22:42:01,107 DEBUG __main__: New conversation item added: id='item_87ed3e19b4c5' type='message' role='assistant' content=["I'd be happy to help you with that! Let me check with my supervisor and get back to you. (pause)"] interrupted=False hash=None created_at=1746378721.1071494
+2025-05-04 22:42:01,142 INFO help_requests_db: Found exact match for question: Do you provide full body massage?
+2025-05-04 22:42:01,142 INFO __main__: Found learned answer for: Do you provide full body massage?
+2025-05-04 22:42:06,126 DEBUG __main__: New conversation item added: id='item_c378901735f1' type='message' role='assistant' content=['Yes we do offer full body massage at 700 INR'] interrupted=False hash=None created_at=1746378726.1262517
+2025-05-04 22:42:06,162 INFO help_requests_db: Found exact match for question: Do you provide full body massage?
+2025-05-04 22:42:06,163 INFO __main__: Found learned answer for: Do you provide full body massage?
+2025-05-04 22:42:10,004 DEBUG __main__: New conversation item added: id='item_2f97a5e2d2c1' type='message' role='assistant' content=['Yes we do offer full body massage at 700 INR'] interrupted=False hash=None created_at=1746378730.0040188
+2025-05-04 22:42:10,038 INFO help_requests_db: Found exact match for question: Do you provide full body massage?
+2025-05-04 22:42:10,039 INFO __main__: Found learned answer for: Do you provide full body massage?
+2025-05-04 22:42:14,101 DEBUG __main__: New conversation item added: id='item_186f8de3d2a9' type='message' role='assistant' content=['Yes we do offer full body massage at 700 INR'] interrupted=False hash=None created_at=1746378734.1013098
+2025-05-04 22:42:14,137 INFO help_requests_db: Found exact match for question: Do you provide full body massage?
+2025-05-04 22:42:14,138 INFO __main__: Found learned answer for: Do you provide full body massage?
+2025-05-04 22:42:17,774 DEBUG __main__: New conversation item added: id='item_eb52b142df0d' type='message' role='assistant' content=['Yes we do offer full body massage at 700 INR'] interrupted=False hash=None created_at=1746378737.7749267
+2025-05-04 22:42:17,813 INFO help_requests_db: Found exact match for question: Do you provide full body massage?
+2025-05-04 22:42:17,814 INFO __main__: Found learned answer for: Do you provide full body massage?
+2025-05-04 22:42:19,673 INFO livekit.agents: shutting down worker
+2025-05-04 22:42:19,674 DEBUG livekit.agents: shutting down job task
+2025-05-04 22:42:19,675 DEBUG livekit.agents: http_session(): closing the httpclient ctx
+2025-05-04 22:42:19,678 DEBUG livekit.agents: job exiting
+2025-05-04 22:42:19,681 INFO livekit.agents: process exiting
+2025-05-04 22:42:28,190 DEBUG asyncio: Using proactor: IocpProactor
+2025-05-04 22:42:28,193 INFO livekit.agents: starting worker
+2025-05-04 22:42:28,194 INFO livekit.agents: starting inference executor
+2025-05-04 22:42:31,913 INFO livekit.agents: initializing inference process
+2025-05-04 22:42:31,915 DEBUG livekit.agents: initializing inference runner
+2025-05-04 22:42:31,913 INFO livekit.agents: initializing inference process
+2025-05-04 22:42:31,915 DEBUG livekit.agents: initializing inference runner
+2025-05-04 22:42:35,588 INFO livekit.agents: inference process initialized
+2025-05-04 22:42:35,590 DEBUG asyncio: Using proactor: IocpProactor
+2025-05-04 22:42:35,588 INFO livekit.agents: inference process initialized
+2025-05-04 22:42:35,590 DEBUG asyncio: Using proactor: IocpProactor
+2025-05-04 22:42:35,592 INFO livekit.agents: [1msee tracing information at http://localhost:52760/debug[0m
+2025-05-04 22:42:35,597 INFO livekit.agents: initializing job runner
+2025-05-04 22:42:35,597 INFO livekit.agents: job runner initialized
+2025-05-04 22:42:35,598 DEBUG asyncio: Using proactor: IocpProactor
+2025-05-04 22:42:35,651 INFO __main__: Starting new conversation with ID: conv_<MagicMock name='mock.name' id='2230177579904'>_2025-05-04T17:12:35.651644
+2025-05-04 22:42:37,013 INFO __main__: Webhook server started as async task with LiveKit session
+2025-05-04 22:42:37,021 INFO webhook_server: LiveKit session successfully initialized in webhook server
+2025-05-04 22:42:37,021 INFO webhook_server: Webhook server started on port 5005
+2025-05-04 22:42:37,021 INFO __main__: Webhook server initialized successfully
+2025-05-04 22:42:37,024 INFO __main__: Registered conversation item handler
+2025-05-04 22:42:37,028 INFO __main__: Session started successfully
+2025-05-04 22:42:37,670 DEBUG livekit.agents: http_session(): creating a new httpclient ctx
+2025-05-04 22:42:51,641 DEBUG __main__: New conversation item added: id='item_f6833ef03e35' type='message' role='assistant' content=["Welcome to Glam Salon! I'm GlamBot, your friendly virtual receptionist. How can I assist you today? Do you have a specific service in mind or would you like some information about our available services?"] interrupted=False hash=None created_at=1746378771.6410108
+2025-05-04 22:42:51,642 WARNING __main__: No user question found before assistant reply.
+2025-05-04 22:42:51,643 INFO __main__: Welcome message sent
+2025-05-04 22:42:55,040 DEBUG livekit.agents: received user transcript
+2025-05-04 22:42:55,119 DEBUG livekit.plugins.turn_detector: eou prediction
+2025-05-04 22:42:55,122 DEBUG __main__: New conversation item added: id='item_c7aabc5b920b' type='message' role='user' content=['Do you provide full body massage?'] interrupted=False hash=None created_at=1746378775.1207588
+2025-05-04 22:43:11,120 DEBUG __main__: New conversation item added: id='item_042725a9e64a' type='message' role='assistant' content=["Let me check with my supervisor and get back to you. Glam Salon does not provide full-body massage services. We specialize in hair and nail care services. If you're interested in a specific service or would like more information, please let me know and I'd be happy to help!"] interrupted=False hash=None created_at=1746378791.1205897
+2025-05-04 22:43:11,158 INFO help_requests_db: Found exact match for question: Do you provide full body massage?
+2025-05-04 22:43:11,158 INFO __main__: Found learned answer for: Do you provide full body massage?
+2025-05-04 22:43:14,689 DEBUG __main__: New conversation item added: id='item_737b167d36b4' type='message' role='assistant' content=['Yes we do offer full body massage at 700 INR'] interrupted=False hash=None created_at=1746378794.6890361
+2025-05-04 22:43:14,727 INFO help_requests_db: Found exact match for question: Do you provide full body massage?
+2025-05-04 22:43:14,728 INFO __main__: Skipping learned answer to prevent repeat.
+2025-05-04 22:43:31,134 DEBUG livekit.agents: received user transcript
+2025-05-04 22:43:31,307 DEBUG livekit.plugins.turn_detector: eou prediction
+2025-05-04 22:43:33,665 DEBUG livekit.agents: received user transcript
+2025-05-04 22:43:33,837 DEBUG livekit.plugins.turn_detector: eou prediction
+2025-05-04 22:43:33,840 DEBUG __main__: New conversation item added: id='item_ac77a2aeed2a' type='message' role='user' content=['Now tell me that whether you provide head massage or not.'] interrupted=False hash=None created_at=1746378813.8394487
+2025-05-04 22:43:59,496 DEBUG __main__: New conversation item added: id='item_c61c268104c9' type='message' role='assistant' content=["I apologize, I think there's been a mistake earlier. As GlamBot, I should correct myself. Glam Salon does not provide full-body massage services. We specialize in hair and nail care services such as haircuts, coloring, and manicures. We do not offer massages, including head massages. If you're interested in booking an appointment for one of our other services, I'd be happy to help!"] interrupted=False hash=None created_at=1746378839.4966874
+2025-05-04 22:43:59,589 DEBUG help_requests_db: Fuzzy match score: 64.66165413533835 for question: Now tell me that whether you provide head massage or not.
+2025-05-04 22:44:37,835 DEBUG livekit.agents: received user transcript
+2025-05-04 22:44:38,101 DEBUG livekit.plugins.turn_detector: eou prediction
+2025-05-04 22:44:38,240 DEBUG livekit.agents: received user transcript
+2025-05-04 22:44:38,488 DEBUG livekit.plugins.turn_detector: eou prediction
+2025-05-04 22:44:38,490 DEBUG __main__: New conversation item added: id='item_be1b9414653b' type='message' role='user' content=['What are the type of skin care solutions that you use?'] interrupted=False hash=None created_at=1746378878.4891605
+2025-05-04 22:44:55,341 DEBUG __main__: New conversation item added: id='item_19e3b1a95b9a' type='message' role='assistant' content=["I apologize, but Glam Salon does not offer skin care solutions. We specialize in hair and nail care services such as haircuts, coloring, and manicures. If you're interested in learning more about our services or booking an appointment, I'd be happy to help!"] interrupted=False hash=None created_at=1746378895.3410504
+2025-05-04 22:44:55,433 DEBUG help_requests_db: Fuzzy match score: 69.3069306930693 for question: What are the type of skin care solutions that you use?
+2025-05-04 22:45:09,633 DEBUG livekit.agents: received user transcript
+2025-05-04 22:45:09,890 DEBUG livekit.plugins.turn_detector: eou prediction
+2025-05-04 22:45:09,892 DEBUG __main__: New conversation item added: id='item_58b3f72fa07a' type='message' role='user' content=['What is the rate of shampoo?'] interrupted=False hash=None created_at=1746378909.891052
+2025-05-04 22:45:26,479 DEBUG __main__: New conversation item added: id='item_5adc692d0269' type='message' role='assistant' content=["I apologize, but Glam Salon does not charge an additional rate for shampoo. Our services include shampooing as part of our haircare treatments. If you're interested in booking a haircut or another hair service, I'd be happy to assist you with pricing and availability!"] interrupted=False hash=None created_at=1746378926.479853
+2025-05-04 22:45:26,556 DEBUG help_requests_db: Fuzzy match score: 50.66666666666666 for question: What is the rate of shampoo?
+2025-05-04 22:45:30,118 DEBUG livekit.agents: received user transcript
+2025-05-04 22:45:30,429 DEBUG livekit.plugins.turn_detector: eou prediction
+2025-05-04 22:45:30,432 DEBUG __main__: New conversation item added: id='item_16c0d6ce3b8e' type='message' role='user' content=['Yes. What is the price of hair curling?'] interrupted=False hash=None created_at=1746378930.4318051
+2025-05-04 22:45:50,190 DEBUG __main__: New conversation item added: id='item_2743eb521d81' type='message' role='assistant' content=["I apologize, but Glam Salon does not offer hair curling as a separate service. We do offer haircuts and styling services, including coloring, but not hair curling specifically. If you're interested in learning more about our hair services or booking an appointment, I'd be happy to help!"] interrupted=False hash=None created_at=1746378950.190096
+2025-05-04 22:45:50,269 DEBUG help_requests_db: Fuzzy match score: 48.837209302325576 for question: Yes. What is the price of hair curling?
+2025-05-04 22:45:54,637 DEBUG livekit.agents: received user transcript
+2025-05-04 22:45:54,905 DEBUG livekit.plugins.turn_detector: eou prediction
+2025-05-04 22:45:54,907 DEBUG __main__: New conversation item added: id='item_6e1882df7d93' type='message' role='user' content=['Is the price of air straightening?'] interrupted=False hash=None created_at=1746378954.9065263
+2025-05-04 22:46:12,494 DEBUG __main__: New conversation item added: id='item_c256e3a09cf2' type='message' role='assistant' content=["I apologize, but Glam Salon does not offer air straightening as a service. We do offer haircuts and styling services, including coloring, but not air straightening specifically. If you're interested in learning more about our hair services or booking an appointment, I'd be happy to help!"] interrupted=False hash=None created_at=1746378972.4949358
+2025-05-04 22:46:12,585 DEBUG help_requests_db: Fuzzy match score: 73.52941176470588 for question: Is the price of air straightening?
+2025-05-04 22:46:24,168 INFO livekit.agents: shutting down worker
+2025-05-04 22:46:24,170 DEBUG livekit.agents: shutting down job task
+2025-05-04 22:46:24,171 DEBUG livekit.agents: http_session(): closing the httpclient ctx
+2025-05-04 22:46:24,173 DEBUG livekit.agents: job exiting
+2025-05-04 22:46:24,176 INFO livekit.agents: process exiting
+2025-05-04 22:51:12,195 DEBUG asyncio: Using proactor: IocpProactor
+2025-05-04 22:51:12,200 INFO livekit.agents: starting worker
+2025-05-04 22:51:12,200 INFO livekit.agents: starting inference executor
+2025-05-04 22:51:15,605 INFO livekit.agents: initializing inference process
+2025-05-04 22:51:15,606 DEBUG livekit.agents: initializing inference runner
+2025-05-04 22:51:15,605 INFO livekit.agents: initializing inference process
+2025-05-04 22:51:15,606 DEBUG livekit.agents: initializing inference runner
+2025-05-04 22:51:19,728 INFO livekit.agents: inference process initialized
+2025-05-04 22:51:19,728 DEBUG asyncio: Using proactor: IocpProactor
+2025-05-04 22:51:19,728 INFO livekit.agents: inference process initialized
+2025-05-04 22:51:19,728 DEBUG asyncio: Using proactor: IocpProactor
+2025-05-04 22:51:19,742 INFO livekit.agents: [1msee tracing information at http://localhost:53276/debug[0m
+2025-05-04 22:51:19,744 INFO livekit.agents: initializing job runner
+2025-05-04 22:51:19,744 INFO livekit.agents: job runner initialized
+2025-05-04 22:51:19,748 DEBUG asyncio: Using proactor: IocpProactor
+2025-05-04 22:51:19,812 INFO __main__: Starting new conversation with ID: conv_<MagicMock name='mock.name' id='2160180806528'>_2025-05-04T17:21:19.812794
+2025-05-04 22:51:21,165 INFO __main__: Webhook server started as async task with LiveKit session
+2025-05-04 22:51:21,167 INFO webhook_server: LiveKit session successfully initialized in webhook server
+2025-05-04 22:51:21,169 INFO webhook_server: Webhook server started on port 5005
+2025-05-04 22:51:21,169 INFO __main__: Webhook server initialized successfully
+2025-05-04 22:51:21,169 INFO __main__: Registered conversation item handler
+2025-05-04 22:51:21,195 INFO __main__: Session started successfully
+2025-05-04 22:51:21,874 DEBUG livekit.agents: http_session(): creating a new httpclient ctx
+2025-05-04 22:51:44,739 DEBUG __main__: New conversation item added: id='item_1ff25c0e014c' type='message' role='assistant' content=["Hello! Welcome to Glam Salon! I'm GlamBot, your virtual receptionist. It's a pleasure to assist you. How can I help you today? Do you have a question about our services or would you like to schedule an appointment? We're open Monday to Saturday from 9 AM to 6 PM at 123 Sunset Park, Calcutta."] interrupted=False hash=None created_at=1746379304.7398229
+2025-05-04 22:51:44,740 WARNING __main__: No user question found before assistant reply.
+2025-05-04 22:51:44,743 INFO __main__: Welcome message sent
+2025-05-04 22:51:50,997 DEBUG livekit.agents: received user transcript
+2025-05-04 22:51:51,482 DEBUG livekit.agents: received user transcript
+2025-05-04 22:51:51,705 DEBUG livekit.plugins.turn_detector: eou prediction
+2025-05-04 22:51:52,465 DEBUG livekit.plugins.turn_detector: eou prediction
+2025-05-04 22:51:54,364 DEBUG livekit.plugins.turn_detector: eou prediction
+2025-05-04 22:51:54,781 DEBUG livekit.agents: received user transcript
+2025-05-04 22:51:54,899 DEBUG livekit.plugins.turn_detector: eou prediction
+2025-05-04 22:51:54,901 DEBUG __main__: New conversation item added: id='item_1607832375c2' type='message' role='user' content=['Yes. I would like to know, like, what are the facials types of facials, your supervisor?'] interrupted=False hash=None created_at=1746379314.9002776
+2025-05-04 22:52:14,047 DEBUG __main__: New conversation item added: id='item_d6e3a11f209d' type='message' role='assistant' content=["I'm happy to help! However, I need to clarify that we're a salon that specializes in hair, nail, and beauty services, and we don't offer facials. But I can definitely check with my supervisor and get back to you if you're interested in learning more about other beauty services we offer! Would that be okay with you?"] interrupted=False hash=None created_at=1746379334.0474322
+2025-05-04 22:52:14,133 DEBUG help_requests_db: Fuzzy match score: 56.64739884393064 for question: Yes. I would like to know, like, what are the facials types of facials, your supervisor?
+2025-05-04 22:52:14,181 INFO help_requests_db: Added new help request: {'question': 'Yes. I would like to know, like, what are the facials types of facials, your supervisor?', 'timestamp': '2025-05-04T17:22:14.133157', 'status': 'pending', 'conversation_id': "conv_<MagicMock name='mock.name' id='2160180806528'>_2025-05-04T17:21:19.812794", 'notified': False, 'timeout_at': '2025-05-04T17:24:14.133157', '_id': ObjectId('6817a246fed8f54244b683e4')}
+2025-05-04 22:52:14,182 INFO __main__: Added help request for supervisor: Yes. I would like to know, like, what are the facials types of facials, your supervisor?
+2025-05-04 22:53:05,050 DEBUG webhook_server: Received supervisor answer - Session: conv_<MagicMock name='mock.name' id='2160180806528'>_2025-05-04T17:21:19.812794, Request: 6817a246fed8f54244b683e4
+2025-05-04 22:53:05,167 INFO help_requests_db: Marked request 6817a246fed8f54244b683e4 as notified
+2025-05-04 22:53:05,168 INFO webhook_server: Sending formatted response: I've checked with my supervisor. 3 types of facials are available
+2025-05-04 22:53:05,172 ERROR livekit.agents: Error in _inference_task
+Traceback (most recent call last):
+  File "C:\Users\deboc\AppData\Local\Programs\Python\Python312\Lib\site-packages\livekit\agents\tts\tts.py", line 445, in __anext__
+    val = await self._event_aiter.__anext__()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+StopAsyncIteration
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\deboc\AppData\Local\Programs\Python\Python312\Lib\site-packages\livekit\agents\utils\log.py", line 16, in async_fn_logs
+    return await fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\deboc\AppData\Local\Programs\Python\Python312\Lib\site-packages\livekit\agents\voice\generation.py", line 146, in _inference_task
+    async for audio_frame in tts_node:
+  File "C:\Users\deboc\AppData\Local\Programs\Python\Python312\Lib\site-packages\livekit\agents\voice\agent.py", line 473, in tts_node
+    async for ev in stream:
+  File "C:\Users\deboc\AppData\Local\Programs\Python\Python312\Lib\site-packages\livekit\agents\tts\tts.py", line 448, in __anext__
+    raise exc  # noqa: B904
+    ^^^^^^^^^
+  File "C:\Users\deboc\AppData\Local\Programs\Python\Python312\Lib\site-packages\livekit\agents\tts\tts.py", line 301, in _main_task
+    return await self._run()
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\deboc\AppData\Local\Programs\Python\Python312\Lib\site-packages\livekit\plugins\cartesia\tts.py", line 381, in _run
+    await asyncio.gather(*tasks)
+  File "C:\Users\deboc\AppData\Local\Programs\Python\Python312\Lib\site-packages\livekit\plugins\cartesia\tts.py", line 313, in _sentence_stream_task
+    await ws.send_str(json.dumps(token_pkt))
+  File "C:\Users\deboc\AppData\Local\Programs\Python\Python312\Lib\site-packages\aiohttp\client_ws.py", line 245, in send_str
+    await self._writer.send_frame(
+  File "C:\Users\deboc\AppData\Local\Programs\Python\Python312\Lib\site-packages\aiohttp\_websocket\writer.py", line 125, in send_frame
+    raise ClientConnectionResetError("Cannot write to closing transport")
+aiohttp.client_exceptions.ClientConnectionResetError: Cannot write to closing transport
+2025-05-04 22:53:05,269 DEBUG __main__: New conversation item added: id='item_54064776b87a' type='message' role='assistant' content=["I've checked with my supervisor. 3 types of facials are available"] interrupted=False hash=None created_at=1746379385.2699873
+2025-05-04 22:53:05,313 INFO help_requests_db: Found exact match for question: Yes. I would like to know, like, what are the facials types of facials, your supervisor?
+2025-05-04 22:53:05,314 INFO __main__: Found learned answer for: Yes. I would like to know, like, what are the facials types of facials, your supervisor?
+2025-05-04 22:53:05,317 INFO webhook_server: Successfully generated reply for request 6817a246fed8f54244b683e4
+2025-05-04 22:53:07,516 DEBUG __main__: New conversation item added: id='item_0fb5d0d565f5' type='message' role='assistant' content=['3 types of facials are available'] interrupted=False hash=None created_at=1746379387.5162163
+2025-05-04 22:53:07,554 INFO help_requests_db: Found exact match for question: Yes. I would like to know, like, what are the facials types of facials, your supervisor?
+2025-05-04 22:53:07,554 INFO __main__: Skipping learned answer to prevent repeat.
+2025-05-04 22:53:20,087 DEBUG livekit.agents: received user transcript
+2025-05-04 22:53:20,350 DEBUG livekit.plugins.turn_detector: eou prediction
+2025-05-04 22:53:20,353 DEBUG __main__: New conversation item added: id='item_8736bb613867' type='message' role='user' content=['Do you provide full body massage?'] interrupted=False hash=None created_at=1746379400.3525207
+2025-05-04 22:53:23,543 DEBUG __main__: New conversation item added: id='item_691233220482' type='message' role='assistant' content=['Let me check with my supervisor and get back to you.'] interrupted=False hash=None created_at=1746379403.5426955
+2025-05-04 22:53:23,582 INFO help_requests_db: Found exact match for question: Do you provide full body massage?
+2025-05-04 22:53:23,583 INFO __main__: Found learned answer for: Do you provide full body massage?
+2025-05-04 22:53:27,494 DEBUG __main__: New conversation item added: id='item_1443d4f270e6' type='message' role='assistant' content=['Yes we do offer full body massage at 700 INR'] interrupted=False hash=None created_at=1746379407.4941263
+2025-05-04 22:53:27,533 INFO help_requests_db: Found exact match for question: Do you provide full body massage?
+2025-05-04 22:53:27,534 INFO __main__: Skipping learned answer to prevent repeat.
+2025-05-04 22:53:44,387 INFO livekit.agents: shutting down worker
+2025-05-04 22:53:44,388 DEBUG livekit.agents: shutting down job task
+2025-05-04 22:53:44,389 DEBUG livekit.agents: http_session(): closing the httpclient ctx
+2025-05-04 22:53:44,390 DEBUG livekit.agents: job exiting
+2025-05-04 22:53:44,393 INFO livekit.agents: process exiting
+2025-05-04 23:18:44,767 DEBUG asyncio: Using proactor: IocpProactor
+2025-05-04 23:18:44,770 INFO livekit.agents: starting worker
+2025-05-04 23:18:44,770 INFO livekit.agents: starting inference executor
+2025-05-04 23:18:48,380 INFO livekit.agents: initializing inference process
+2025-05-04 23:18:48,380 DEBUG livekit.agents: initializing inference runner
+2025-05-04 23:18:48,380 INFO livekit.agents: initializing inference process
+2025-05-04 23:18:48,380 DEBUG livekit.agents: initializing inference runner
+2025-05-04 23:18:52,796 INFO livekit.agents: inference process initialized
+2025-05-04 23:18:52,796 DEBUG asyncio: Using proactor: IocpProactor
+2025-05-04 23:18:52,796 INFO livekit.agents: inference process initialized
+2025-05-04 23:18:52,796 DEBUG asyncio: Using proactor: IocpProactor
+2025-05-04 23:18:52,796 INFO livekit.agents: [1msee tracing information at http://localhost:53579/debug[0m
+2025-05-04 23:18:52,802 INFO livekit.agents: initializing job runner
+2025-05-04 23:18:52,803 INFO livekit.agents: job runner initialized
+2025-05-04 23:18:52,803 DEBUG asyncio: Using proactor: IocpProactor
+2025-05-04 23:18:52,863 INFO __main__: Starting new conversation with ID: conv_<MagicMock name='mock.name' id='2575744189360'>_2025-05-04T17:48:52.863356
+2025-05-04 23:18:54,512 INFO __main__: Webhook server started as async task with LiveKit session
+2025-05-04 23:18:54,515 INFO webhook_server: LiveKit session successfully initialized in webhook server
+2025-05-04 23:18:54,516 INFO webhook_server: Webhook server started on port 5005
+2025-05-04 23:18:54,516 INFO __main__: Webhook server initialized successfully
+2025-05-04 23:18:54,516 INFO __main__: Registered conversation item handler
+2025-05-04 23:18:54,548 INFO __main__: Session started successfully
+2025-05-04 23:18:55,235 DEBUG livekit.agents: http_session(): creating a new httpclient ctx
+2025-05-04 23:19:00,682 INFO livekit.agents: shutting down worker
+2025-05-04 23:19:00,683 DEBUG livekit.agents: shutting down job task
+2025-05-04 23:19:00,685 DEBUG livekit.agents: http_session(): closing the httpclient ctx
+2025-05-04 23:19:00,686 DEBUG livekit.agents: job exiting
+2025-05-04 23:19:00,689 INFO livekit.agents: process exiting
+2025-05-04 23:19:59,234 DEBUG asyncio: Using proactor: IocpProactor
+2025-05-04 23:19:59,237 INFO livekit.agents: starting worker
+2025-05-04 23:19:59,237 INFO livekit.agents: starting inference executor
+2025-05-04 23:20:03,753 INFO livekit.agents: initializing inference process
+2025-05-04 23:20:03,753 DEBUG livekit.agents: initializing inference runner
+2025-05-04 23:20:03,753 INFO livekit.agents: initializing inference process
+2025-05-04 23:20:03,753 DEBUG livekit.agents: initializing inference runner
+2025-05-04 23:20:10,501 INFO livekit.agents: inference process initialized
+2025-05-04 23:20:10,501 DEBUG asyncio: Using proactor: IocpProactor
+2025-05-04 23:20:10,501 INFO livekit.agents: inference process initialized
+2025-05-04 23:20:10,501 DEBUG asyncio: Using proactor: IocpProactor
+2025-05-04 23:20:10,507 INFO livekit.agents: [1msee tracing information at http://localhost:53650/debug[0m
+2025-05-04 23:20:10,510 INFO livekit.agents: initializing job runner
+2025-05-04 23:20:10,511 INFO livekit.agents: job runner initialized
+2025-05-04 23:20:10,512 DEBUG asyncio: Using proactor: IocpProactor
+2025-05-04 23:20:10,613 INFO __main__: Starting new conversation with ID: conv_<MagicMock name='mock.name' id='2011595097008'>_2025-05-04T17:50:10.613605
+2025-05-04 23:20:12,494 INFO __main__: Webhook server started as async task with LiveKit session
+2025-05-04 23:20:12,495 INFO webhook_server: LiveKit session successfully initialized in webhook server
+2025-05-04 23:20:12,496 INFO webhook_server: Webhook server started on port 5005
+2025-05-04 23:20:12,497 INFO __main__: Webhook server initialized successfully
+2025-05-04 23:20:12,497 INFO __main__: Registered conversation item handler
+2025-05-04 23:20:12,505 INFO __main__: Session started successfully
+2025-05-04 23:20:12,832 DEBUG livekit.agents: http_session(): creating a new httpclient ctx
+2025-05-04 23:20:25,984 DEBUG __main__: New conversation item added: id='item_928861fc2f0d' type='message' role='assistant' content=["Welcome to Glam Salon! Thank you for calling us. I'm GlamBot, your virtual receptionist. How can I assist you today? Would you like to schedule an appointment or inquire about our services?"] interrupted=False hash=None created_at=1746381025.9844055
+2025-05-04 23:20:25,985 WARNING __main__: No user question found before assistant reply.
+2025-05-04 23:20:25,986 INFO __main__: Welcome message sent
+2025-05-04 23:20:32,577 DEBUG livekit.agents: received user transcript
+2025-05-04 23:20:32,777 DEBUG livekit.plugins.turn_detector: eou prediction
+2025-05-04 23:20:32,780 DEBUG __main__: New conversation item added: id='item_e69dcf37e448' type='message' role='user' content=['I would like to know about the haircut.'] interrupted=False hash=None created_at=1746381032.7792575
+2025-05-04 23:20:42,676 DEBUG __main__: New conversation item added: id='item_3cfb6c416fe1' type='message' role='assistant' content=['Our haircuts are $30. Would you like to schedule an appointment for a haircut during our operating hours, which are Monday to Saturday from 9 AM to 6 PM?'] interrupted=False hash=None created_at=1746381042.6761553
+2025-05-04 23:20:42,765 DEBUG help_requests_db: Fuzzy match score: 55.10204081632652 for question: I would like to know about the haircut.
+2025-05-04 23:20:49,878 DEBUG livekit.agents: received user transcript
+2025-05-04 23:20:50,074 DEBUG livekit.plugins.turn_detector: eou prediction
+2025-05-04 23:20:50,076 DEBUG __main__: New conversation item added: id='item_d3d2ea1c6110' type='message' role='user' content=['Do you provide full body massage?'] interrupted=False hash=None created_at=1746381050.0756168
+2025-05-04 23:21:00,690 DEBUG __main__: New conversation item added: id='item_439173593232' type='message' role='assistant' content=["Let me check with my supervisor and get back to you. As a salon, our primary focus is on hair and nail services, but I'll check if we offer any additional treatments."] interrupted=False hash=None created_at=1746381060.690166
+2025-05-04 23:21:00,730 INFO help_requests_db: Found exact match for question: Do you provide full body massage?
+2025-05-04 23:21:00,731 INFO __main__: Found learned answer for: Do you provide full body massage?
+2025-05-04 23:21:04,768 DEBUG __main__: New conversation item added: id='item_f80bbd644f2e' type='message' role='assistant' content=['Yes we do offer full body massage at 700 INR'] interrupted=False hash=None created_at=1746381064.7684734
+2025-05-04 23:21:04,809 INFO help_requests_db: Found exact match for question: Do you provide full body massage?
+2025-05-04 23:21:04,809 INFO __main__: Skipping learned answer to prevent repeat.
+2025-05-04 23:21:18,815 DEBUG livekit.agents: received user transcript
+2025-05-04 23:21:19,163 DEBUG livekit.plugins.turn_detector: eou prediction
+2025-05-04 23:21:19,164 DEBUG __main__: New conversation item added: id='item_698e71b62294' type='message' role='user' content=['What are the type of full body messages that are available'] interrupted=False hash=None created_at=1746381079.163635
+2025-05-04 23:21:42,886 DEBUG __main__: New conversation item added: id='item_7f9a6a04bd5e' type='message' role='assistant' content=["I apologize, I made a mistake earlier. As a salon, Glam Salon does not offer full-body massages. We specialize in hair and nail services, and our expertise lies in providing exceptional cuts, colors, and manicures. If you're looking for massage therapy, I recommend checking with our partners for recommendations. Let me check with my supervisor and get back to you."] interrupted=False hash=None created_at=1746381102.8867505
+2025-05-04 23:21:42,973 DEBUG help_requests_db: Fuzzy match score: 64.76190476190476 for question: What are the type of full body messages that are available
+2025-05-04 23:21:43,028 INFO help_requests_db: Added new help request: {'question': 'What are the type of full body messages that are available', 'timestamp': '2025-05-04T17:51:42.976297', 'status': 'pending', 'conversation_id': "conv_<MagicMock name='mock.name' id='2011595097008'>_2025-05-04T17:50:10.613605", 'notified': False, 'timeout_at': '2025-05-04T17:53:42.976297', '_id': ObjectId('6817a92e4d9fe8490f0d548d')}
+2025-05-04 23:21:43,028 INFO __main__: Added help request for supervisor: What are the type of full body messages that are available
+2025-05-04 23:22:03,333 DEBUG webhook_server: Received supervisor answer - Session: conv_<MagicMock name='mock.name' id='2011595097008'>_2025-05-04T17:50:10.613605, Request: 6817a92e4d9fe8490f0d548d
+2025-05-04 23:22:03,461 INFO help_requests_db: Marked request 6817a92e4d9fe8490f0d548d as notified
+2025-05-04 23:22:03,509 INFO webhook_server: Sending formatted response: I've checked with my supervisor. no we dont provide this service
+2025-05-04 23:22:07,397 DEBUG __main__: New conversation item added: id='item_3d608460fd72' type='message' role='assistant' content=["I've checked with my supervisor. no we dont provide this service"] interrupted=False hash=None created_at=1746381127.397953
+2025-05-04 23:22:07,439 INFO help_requests_db: Found exact match for question: What are the type of full body messages that are available
+2025-05-04 23:22:07,440 INFO __main__: Found learned answer for: What are the type of full body messages that are available
+2025-05-04 23:22:07,442 INFO webhook_server: Successfully generated reply for request 6817a92e4d9fe8490f0d548d
+2025-05-04 23:22:09,898 DEBUG __main__: New conversation item added: id='item_82a296d0050f' type='message' role='assistant' content=['no we dont provide this service'] interrupted=False hash=None created_at=1746381129.8977711
+2025-05-04 23:22:09,935 INFO help_requests_db: Found exact match for question: What are the type of full body messages that are available
+2025-05-04 23:22:09,935 INFO __main__: Skipping learned answer to prevent repeat.
+2025-05-04 23:22:18,864 INFO livekit.agents: shutting down worker
+2025-05-04 23:22:18,866 DEBUG livekit.agents: shutting down job task
+2025-05-04 23:22:18,866 DEBUG livekit.agents: http_session(): closing the httpclient ctx
+2025-05-04 23:22:18,868 DEBUG livekit.agents: job exiting
+2025-05-04 23:22:18,871 INFO livekit.agents: process exiting

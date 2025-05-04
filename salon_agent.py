@@ -97,9 +97,19 @@ async def entrypoint(ctx: agents.JobContext):
                 if user_question:
                     # First check if we have a learned answer
                     learned_answer = get_learned_answer(user_question)
+                    # --- CONTENT CHECK: Prevent loop ---
+                    if (
+                        learned_answer
+                        and message.content
+                        and message.content[0].strip() == learned_answer.strip()
+                    ):
+                        # This message is already the learned answer, so skip
+                        logger.info("Skipping learned answer to prevent repeat.")
+                        return
+                    # --- END CONTENT CHECK ---
                     if learned_answer:
                         logger.info(f"Found learned answer for: {user_question}")
-                        await session.say(learned_answer)
+                        session.say(learned_answer)
                     # Only proceed with supervisor check if we don't have a learned answer
                     elif any("supervisor" in str(c).lower() for c in message.content):
                         add_help_request(user_question, conversation_id)

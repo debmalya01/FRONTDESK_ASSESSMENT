@@ -24,7 +24,7 @@ LEARNED_ANSWERS_COLLECTION = "learned_answers"
 REQUEST_TIMEOUT_MINUTES = 2
 
 # Fuzzy matching threshold (0-100)
-FUZZY_MATCH_THRESHOLD = 80
+FUZZY_MATCH_THRESHOLD = 65
 
 # Create a new client and connect to the server using ServerApi
 client = MongoClient(MONGO_URI, server_api=ServerApi('1'))
