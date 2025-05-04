@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Pending Requests</h5>
+                <h2 class="card-text">{{ stats.pending }}</h2>
+                <a href="/requests/pending" class="btn btn-primary">View Pending</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Resolved Requests</h5>
+                <h2 class="card-text">{{ stats.resolved }}</h2>
+                <a href="/requests/resolved" class="btn btn-success">View Resolved</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Unresolved Requests</h5>
+                <h2 class="card-text">{{ stats.unresolved }}</h2>
+                <a href="/requests/unresolved" class="btn btn-danger">View Unresolved</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-4">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="card-title mb-0">Recent History</h5>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Time</th>
+                                <th>Question</th>
+                                <th>Status</th>
+                                <th>Answer</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for request in history %}
+                            <tr>
+                                <td>{{ request.timestamp|format_datetime }}</td>
+                                <td>{{ request.question }}</td>
+                                <td>
+                                    <span class="badge status-badge status-{{ request.status }}">
+                                        {{ request.status }}
+                                    </span>
+                                </td>
+                                <td>
+                                    {% if request.status == 'resolved' %}
+                                        {{ request.answer }}
+                                    {% else %}
+                                        -
+                                    {% endif %}
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+                <a href="/history" class="btn btn-primary">View Full History</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %} 
