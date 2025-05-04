@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="card">
+    <div class="card-header d-flex justify-content-between align-items-center">
+        <h5 class="mb-0">Request History</h5>
+        <a href="/" class="btn btn-secondary">Back to Dashboard</a>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Time</th>
+                        <th>Question</th>
+                        <th>Status</th>
+                        <th>Answer</th>
+                        <th>Details</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for request in history %}
+                    <tr>
+                        <td>{{ request.timestamp|format_datetime }}</td>
+                        <td>{{ request.question }}</td>
+                        <td>
+                            <span class="badge status-badge status-{{ request.status }}">
+                                {{ request.status }}
+                            </span>
+                        </td>
+                        <td>
+                            {% if request.status == 'resolved' %}
+                                {{ request.answer }}
+                            {% else %}
+                                -
+                            {% endif %}
+                        </td>
+                        <td>
+                            {% if request.status == 'resolved' %}
+                                Resolved: {{ request.resolved_at|format_datetime }}
+                            {% elif request.status == 'unresolved' %}
+                                Timed out: {{ request.unresolved_at|format_datetime }}
+                            {% else %}
+                                Timeout: {{ request.timeout_at|format_datetime }}
+                            {% endif %}
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %} 
