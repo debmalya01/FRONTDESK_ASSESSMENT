@@ -1,0 +1,125 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="card">
+    <div class="card-header d-flex justify-content-between align-items-center">
+        <h5 class="mb-0">{{ status|title }} Requests</h5>
+        <a href="/" class="btn btn-secondary">Back to Dashboard</a>
+    </div>
+    <div class="card-body">
+        {% if requests %}
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Time</th>
+                            <th>Question</th>
+                            {% if status == 'resolved' %}
+                                <th>Answer</th>
+                                <th>Resolved At</th>
+                            {% elif status == 'unresolved' %}
+                                <th>Timed Out At</th>
+                                <th>Reason</th>
+                            {% else %}
+                                <th>Time Left</th>
+                                <th>Action</th>
+                            {% endif %}
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for request in requests %}
+                        <tr>
+                            <td>{{ request.timestamp|format_datetime }}</td>
+                            <td>{{ request.question }}</td>
+                            {% if status == 'resolved' %}
+                                <td>{{ request.answer }}</td>
+                                <td>{{ request.resolved_at|format_datetime }}</td>
+                            {% elif status == 'unresolved' %}
+                                <td>{{ request.unresolved_at|format_datetime }}</td>
+                                <td>
+                                    {% if request.unresolved_reason %}
+                                        <span class="badge bg-danger">{{ request.unresolved_reason }}</span>
+                                    {% else %}
+                                        <span class="badge bg-secondary">Unknown</span>
+                                    {% endif %}
+                                </td>
+                            {% else %}
+                                <td>
+                                    {% set time_left = get_time_left(request) %}
+                                    {% if time_left is not none %}
+                                        {% if time_left > 0 %}
+                                            <div class="d-flex align-items-center">
+                                                <div class="progress flex-grow-1 me-2" style="height: 6px;">
+                                                    <div class="progress-bar {% if time_left < 5 %}bg-danger{% elif time_left < 10 %}bg-warning{% else %}bg-success{% endif %}" 
+                                                         role="progressbar" 
+                                                         style="width: {{ (time_left / 30 * 100)|round|int }}%">
+                                                    </div>
+                                                </div>
+                                                <span>{{ time_left|round|int }}m</span>
+                                            </div>
+                                        {% else %}
+                                            <span class="badge bg-danger">Expired</span>
+                                        {% endif %}
+                                    {% else %}
+                                        <span class="badge bg-secondary">Unknown</span>
+                                    {% endif %}
+                                </td>
+                                <td>
+                                    <button type="button" 
+                                            class="btn btn-primary btn-sm" 
+                                            data-bs-toggle="modal" 
+                                            data-bs-target="#answerModal{{ request._id }}"
+                                            {% if time_left is not none and time_left <= 0 %}disabled{% endif %}>
+                                        Answer
+                                    </button>
+                                </td>
+                            {% endif %}
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        {% else %}
+            <div class="alert alert-info">
+                No {{ status }} requests found.
+            </div>
+        {% endif %}
+    </div>
+</div>
+
+{% if status == 'pending' %}
+    {% for request in requests %}
+    <!-- Answer Modal -->
+    <div class="modal fade" id="answerModal{{ request._id }}" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Answer Request</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p><strong>Question:</strong> {{ request.question }}</p>
+                    {% set time_left = get_time_left(request) %}
+                    {% if time_left is not none and time_left <= 0 %}
+                        <div class="alert alert-danger">
+                            This request has expired and cannot be answered.
+                        </div>
+                    {% else %}
+                        <form action="{{ url_for('answer', request_id=request._id) }}" method="POST">
+                            <div class="mb-3">
+                                <label for="answer" class="form-label">Your Answer:</label>
+                                <textarea class="form-control" 
+                                          name="answer" 
+                                          rows="4" 
+                                          required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit Answer</button>
+                        </form>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+{% endif %}
+{% endblock %} 
